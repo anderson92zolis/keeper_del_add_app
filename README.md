@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+Starting the project, you'll notice that the challenge instructions are very simple. All we want to do is to be able to add notes and delete notes from our keeper app. The final functionality that you're looking for is when we add a note with a new title and when we click the Add button it clears those inputs and pushes a new note into our array of notes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Register Login App
 
-## Available Scripts
 
-In the project directory, you can run:
+![Login](https://github.com/anderson92zolis/Login_Register_App_React/blob/main/photo/Login.jpg)
+![Register](https://github.com/anderson92zolis/Login_Register_App_React/blob/main/photo/register.jpg)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+1. Implement the add note functionality.
+    1. Create a constant that keeps track of the title and content.
+    2. Pass the new note back to the App.
+    3. Add new note to an array.
+    4. Take array and render seperate Note components for each item.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Implement the delete note functionality.
+    1. Callback from the Note component to trigger a delete function.
+    2. Use the filter function to filter out the item that needs deletion.
+    3. Pass a id over to the Note component, pass it back to the App when deleting.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+//This is the end result you're aiming for:
+//https://pogqj.csb.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+> Challenge: Without moving the userIsRegistered variable,
+1. Show Login as the button text if userIsRegistered is true.
+> Show Register as the button text if userIsRegistered is false.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Only show the Confirm Password input if userIsRegistered is false.
+> Don't show it if userIsRegistered is true.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Conditional Rendering 
 
-## Learn More
+Conditional rendering is a fundamental concept in React that allows you to show different components depending on a particular condition, we will learn how to use conditional rendering to:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Show the login screen if the user is registered, and the register screen if the user is not registered.
+> Show the confirm password input if the user is registering, and not show it if the user is logging in.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Step 1: Passing Props**
 
-### Code Splitting
+The first step is to pass a prop called isRegistered from the App.js component to the form.jsx component. This prop will be used to determine whether to show the login or register screen.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Step 2: Using the AND Operator**
 
-### Analyzing the Bundle Size
+The second step is to use the AND operator to check whether the isRegistered prop is equal to false inside the Form.jsx component. If it is, then the confirm password input will be shown. Otherwise, it will not be shown.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Alternative Approach: Ternary Operator
 
-### Making a Progressive Web App
+An alternative approach to using the AND operator is to use a ternary operator. The ternary operator is a concise way to evaluate a condition and return one value if the condition is true, and another value if the condition is false.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Shortest Possible Way
 
-### Advanced Configuration
+> !props.isRegistered is equivalent to props.isRegistered === false. This allows you to write the entire conditional rendering statement in one line.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Conclusion
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Conditional rendering is a powerful tool that can be used to create dynamic and responsive user interfaces. By learning how to use conditional rendering, you can build more sophisticated React applications.
