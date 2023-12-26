@@ -1,5 +1,8 @@
 # To-Do List application 
 
+![Add Note](https://github.com/anderson92zolis/keeper_del_add_app/blob/develop/photo/add%20note.jpg)
+![Delete Note](https://github.com/anderson92zolis/keeper_del_add_app/blob/develop/photo/delete.jpg)
+
 
 Starting the project, you'll notice that the challenge instructions are very simple. All we want to do is to be able to add notes and delete notes from our keeper app. The final functionality that you're looking for is when we add a note with a new title and when we click the Add button it clears those inputs and pushes a new note into our array of notes.
 
